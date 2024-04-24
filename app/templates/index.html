@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block content %}
+<div class="home">
+  <h2>Welcome to Fake Data Generator!</h2>
+  <form action="{{ url_for('generate_fake') }}" method="post">
+    <label for="num_users">Number of Users:</label>
+    <input type="number" id="num_users" name="num_users" value="5" min="1" />
+    <label for="num_products">Number of Products:</label>
+    <input
+      type="number"
+      id="num_products"
+      name="num_products"
+      value="10"
+      min="1"
+    />
+    <label for="num_orders">Number of Orders:</label>
+    <input type="number" id="num_orders" name="num_orders" value="20" min="1" />
+    <button type="submit">Generate Fake Data</button>
+  </form>
+</div>
+{% endblock %}
